@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "name": "hemalatha",
+      "description": "Working to bring education to underprivileged children.",
+      "since": "2008",
+      "motto": "Education for all.",
+      "upiId": "hemaganapathy26@oksbi",
+      "website": "https://educateall.org"
+    },
+    {
+      "id": 2,
+      "name": "Helping Hands",
+      "description": "Providing food and shelter to the homeless.",
+      "since": "2005",
+      "motto": "Help those in need.",
+      "upiId": "helpinghands@upi",
+      "website": "https://helpinghands.org"
+    },
+    {
+      "id": 3,
+      "name": "Green Earth Initiative",
+      "description": "Focused on environmental conservation and awareness.",
+      "since": "2010",
+      "motto": "Preserve our planet for the future.",
+      "upiId": "greenearth@upi",
+      "website": "https://greenearthinitiative.org"
+    },
+    {
+      "id": 4,
+      "name": "Educate All",
+      "description": "Working to bring education to underprivileged children.",
+      "since": "2008",
+      "motto": "Education for all.",
+      "upiId": "educateall@upi",
+      "website": "https://educateall.org"
+    },
+    {
+      "id": 5,
+      "name": "hemalatha",
+      "description": "Working to bring education to underprivileged children.",
+      "since": "2008",
+      "motto": "Education for all.",
+      "upiId": "hemaganapathy26@oksbi",
+      "website": "https://educateall.org"
+    }
+  ]
+  
