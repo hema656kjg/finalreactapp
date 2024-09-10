@@ -13,7 +13,7 @@ const Welcome = () => {
         <h2>Sponsor Profile</h2>
         <p>Name: John Doe</p>
         <p>Email: johndoe@example.com</p>
-        <p>Total Donations: $5000</p>
+     
       </div>
     </div>
   );
