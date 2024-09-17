@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faDonate, faFileInvoiceDollar, faHandsHelping } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faPiggyBank, faMoneyBillWave, faFileInvoiceDollar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import './Sidebar.css';
 
 const Sidebar = () => {
@@ -15,7 +14,7 @@ const Sidebar = () => {
   return (
     <div className={`sidebar ${isExpanded ? 'expanded' : ''}`}>
       <div className="sidebar-header">
-        {isExpanded && <img src="/path/to/altruserve.png" alt="AltruServe Logo" className="logo" />}
+        {isExpanded && <img src="/path/to/ngo-logo.png" alt="NGO Logo" className="logo" />}
         <div className="hamburger" onClick={toggleSidebar}>
           <span></span>
           <span></span>
@@ -30,10 +29,16 @@ const Sidebar = () => {
             {isExpanded && <span className="text">Profile</span>}
           </Link>
         </li>
-        <li className={`sidebar-item ${!isExpanded ? 'tooltip' : ''}`} title={!isExpanded ? 'Donate' : ''}>
-          <Link to="/donate">
-            <FontAwesomeIcon icon={faDonate} className="icon" />
-            {isExpanded && <span className="text">Donate</span>}
+        <li className={`sidebar-item ${!isExpanded ? 'tooltip' : ''}`} title={!isExpanded ? 'Deposits' : ''}>
+          <Link to="/deposits">
+            <FontAwesomeIcon icon={faPiggyBank} className="icon" />
+            {isExpanded && <span className="text">Deposits</span>}
+          </Link>
+        </li>
+        <li className={`sidebar-item ${!isExpanded ? 'tooltip' : ''}`} title={!isExpanded ? 'Expenditure' : ''}>
+          <Link to="/expenditure">
+            <FontAwesomeIcon icon={faMoneyBillWave} className="icon" />
+            {isExpanded && <span className="text">Expenditure</span>}
           </Link>
         </li>
         <li className={`sidebar-item ${!isExpanded ? 'tooltip' : ''}`} title={!isExpanded ? 'Transactions' : ''}>
@@ -42,10 +47,10 @@ const Sidebar = () => {
             {isExpanded && <span className="text">Transactions</span>}
           </Link>
         </li>
-        <li className={`sidebar-item ${!isExpanded ? 'tooltip' : ''}`} title={!isExpanded ? 'View NGOs' : ''}>
-          <Link to="/viewngos">
-            <FontAwesomeIcon icon={faHandsHelping} className="icon" />
-            {isExpanded && <span className="text">View NGOs</span>}
+        <li className={`sidebar-item ${!isExpanded ? 'tooltip' : ''}`} title={!isExpanded ? 'Sign Out' : ''}>
+          <Link to="/signout">
+            <FontAwesomeIcon icon={faSignOutAlt} className="icon" />
+            {isExpanded && <span className="text">Sign Out</span>}
           </Link>
         </li>
       </ul>

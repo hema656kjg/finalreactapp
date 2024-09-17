@@ -1,81 +1,71 @@
-/* General styles for the NGO list */
 .ngos-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+  margin-left: 17%;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.know-more{
+
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .ngo-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   padding: 20px;
-  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transition effect */
 }
 
+/* Change background color on hover */
 .ngo-card:hover {
-  transform: translateY(-5px);
+  background-color: #f0f8ff; /* Light background color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly increase shadow on hover */
 }
 
 .ngo-card h2 {
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.ngo-card p {
-  margin: 5px 0;
-  color: #555;
+  margin-top: 0;
 }
 
 .ngo-actions {
-  display: flex;
-  gap: 10px;
   margin-top: 10px;
 }
 
-.ngo-actions button, .ngo-actions .visit-site {
-  padding: 10px 20px;
+.ngo-actions button {
+  margin-right: 10px;
+}
+
+.view-details, .donate, .visit-site,.know-more {
+  background-color: #007bff;
   border: none;
+  color: white;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
-/* Buttons */
-.view-details {
-  background-color: #007bff;
-  color: white;
-}
-
-.view-details:hover {
+.view-details:hover, .donate:hover, .visit-site:hover {
   background-color: #0056b3;
-  transform: translateY(-2px);
 }
 
-.donate {
-  background-color: #28a745;
-  color: white;
-}
-
-.donate:hover {
-  background-color: #218838;
-  transform: translateY(-2px);
-}
-
-/* Visit Site link */
 .visit-site {
-  text-decoration: none;
-  color: white;
-  background-color: #17a2b8;
-  border-radius: 5px;
-  display: inline-block;
-  padding: 10px 20px;
+  background-color: #28a745;
 }
 
 .visit-site:hover {
-  background-color: #138496;
-  transform: translateY(-2px);
+  background-color: #218838;
 }

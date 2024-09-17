@@ -1,0 +1,35 @@
+.ngo-profile {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .intro, .vision-mission, .impact-stories, .focus-areas, .projects, .volunteer-partnership, .donors, .achievements {
+    margin-bottom: 40px;
+  }
+  
+  h2, h3 {
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  

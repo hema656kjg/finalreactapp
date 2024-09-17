@@ -9,12 +9,9 @@ const Welcome = () => {
       <p>This is a portal where sponsors can manage donations, view transactions, and explore NGOs.</p>
       
       {/* Sponsor profile details */}
-      <div className="welcome-details">
-        <h2>Sponsor Profile</h2>
-        <p>Name: John Doe</p>
-        <p>Email: johndoe@example.com</p>
+      
      
-      </div>
+      
     </div>
   );
 };

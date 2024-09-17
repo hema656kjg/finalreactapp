@@ -1,15 +1,20 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'; 
- // useParams to get UPI ID from URL
 
 const DonatePage = () => {
   const { upiId } = useParams();  // Extract the UPI ID from the URL
 
   const handleUPIPayment = () => {
-    const upiLink = `upi://pay?pa=${upiId}&pn=hemalatha&tn=Donate to NGO&cu=INR`;
-    // Redirect to UPI payment app
-    window.location.href = upiLink;
+    if (upiId) {
+      const upiLink = `upi://pay?pa=${upiId}&pn=hemalatha&tn=Donate to NGO&cu=INR`;
+      // Redirect to UPI payment app
+      window.location.href = upiLink;
+    }
   };
+
+  if (!upiId) {
+    return <p>Loading...</p>;  // Handle case where upiId is not yet available
+  }
 
   return (
     <div className="donate-page">

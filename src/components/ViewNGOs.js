@@ -1,21 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './viewngos.css';
+import './viewngos.css'; // Ensure the path and file name are correct
 
 // Import the JSON data
 import ngosData from './ngos.json'; // Adjust the path according to your folder structure
 
 const ViewNGOs = () => {
   const [ngos, setNgos] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     // Set NGOs data from JSON file
     setNgos(ngosData);
   }, []);
 
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const filteredNgos = ngos.filter((ngo) =>
+    ngo.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="ngos-list">
-      {ngos.map((ngo) => (
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search NGOs..."
+          value={searchQuery}
+          onChange={handleSearch}
+        />
+      </div>
+      {filteredNgos.map((ngo) => (
         <div key={ngo.id} className="ngo-card">
           <h2>{ngo.name}</h2>
           <p>{ngo.description}</p>
@@ -23,11 +40,15 @@ const ViewNGOs = () => {
           <p><strong>Motto:</strong> {ngo.motto}</p>
           <div className="ngo-actions">
             <button className="view-details">View Details</button>
-            {/* Use Link for dynamic routing to donate page */}
             <Link to={`/donate/${ngo.upiId}`}>
               <button className="donate">Donate</button>
             </Link>
-            <a href={ngo.website} target="_blank" rel="noopener noreferrer" className="visit-site">Visit Site</a>
+            <Link to={`/ngo/${ngo.id}`}>
+              <button className="know-more">Know More</button>
+            </Link>
+            <a href={ngo.website} target="_blank" rel="noopener noreferrer" className="visit-site">
+              Visit Site
+            </a>
           </div>
         </div>
       ))}
